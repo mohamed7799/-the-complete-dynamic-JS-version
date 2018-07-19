@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--styles-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Books</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <input class="search" id="search" value="search" type="text">
+        <button id="add-js" class="add">Add Product</button>
+        <select class="products" name="products" id="products-js">
+            
+        </select>
+    </nav>
+    <section id="content-area-js" class="content-area">
+
+    </section>
+    <div class="popup">
+        <form  class="add-form">
+                <h2>Product Form</h2>
+                <hr class="line">
+                <label class="label">Name</label>
+                <input type="text" name="name" required>
+                <label class="label">Price</label>
+                <input type="text" name="price" required>
+                <label class="label">PictureURL</label>
+                <input type="text" name="pictureUrl" required>
+                <label class="label">Category (books,albums,.....)</label>
+                <input type="text" name="Category" required>
+                <label class="label">Selling points</label>
+                <input type="text" name="listOfSellingPoints" required>
+                <button id="submit-js" class="add">Add</button>
+        </form>
+    </div>
+    <!--scripts-->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

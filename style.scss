@@ -1,0 +1,170 @@
+//variables
+$main:#01f597;
+/*fonts*/
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+/*css reset*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    min-width: 100%;
+    min-height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+}
+
+/*css reset*/
+
+/*general style*/
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/*navbar*/
+
+.navbar {
+    padding: 2rem 0;
+    background-color: rgb(8, 197, 197);
+    display: flex;
+    justify-content: space-around;
+}
+
+.products,
+.search,
+.add {
+    border-radius: 5px;
+    border: 0px;
+}
+
+.products,
+.search {
+    width: 20%;
+    margin: auto;
+    display: block;
+    padding: .5rem;
+    font-size: 1.1rem;
+}
+
+.products {
+    color: #6398da;
+}
+
+.search {
+    color: rgb(182, 182, 182);
+    &:focus {
+        color: #6398da;
+    }
+}
+
+.add {
+    padding: 1em;
+    background-color: #74e074;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    &:focus {
+        outline: 0;
+    }
+}
+
+/*navbar*/
+
+/*content area*/
+
+.content-area {
+    display: flex;
+    padding: 2rem;
+    flex-wrap: wrap;
+    &>* {
+        flex-basis: 20%;
+    }
+}
+
+.product {
+    border: 1px solid $main;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 1rem;
+    animation-duration: 2.5s;
+}
+
+.line {
+    margin: 1rem 0;
+    border: .5px solid $main;
+}
+
+.name,
+.price,
+.category,
+.picture,
+.selling-points {
+    margin-bottom: .7rem;
+    color: #336b86;
+    font-weight: bold;
+}
+
+/*popup*/
+
+.popup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #333232a3;
+    display: none;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px;
+    color: #6d6d6d;
+}
+
+.add-form {
+    width: 50%;
+    border: 1px solid white;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 5px;
+    & label,
+    & input,
+    & button {
+        display: block;
+        margin-bottom: 1rem;
+    }
+    & h2 {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    & input {
+        padding: .5rem;
+        border-radius: 5px;
+        border: 1px solid #ad9d9d;
+        width: 50%;
+    }
+    & button {
+        margin-left: auto;
+    }
+}

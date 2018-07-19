@@ -244,8 +244,6 @@
         }
         else {
             products[newItem.Category] = [newItem];
-            console.log(products);
-            alert(category);
             $('#content-area-js').empty();
             $('#products-js').empty();
             fillDropDownMenu();

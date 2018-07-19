@@ -206,7 +206,7 @@
         let searchWord = $(this).val().toLowerCase();
         let items = $('.product');
         for (let i = 0; i < items.length; i++) {
-            let itemName = $(items[i]).find('.Name').text().toLowerCase();
+            let itemName = $(items[i]).find('.name').text().toLowerCase();
             if (itemName.indexOf(searchWord) !== -1) {
                 $(items[i]).css('display', 'block');
             }

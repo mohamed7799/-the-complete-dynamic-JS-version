@@ -235,19 +235,24 @@
         item.forEach(function (x) {
             newItem[x.name] = x.value;
         });
-        if (products.hasOwnProperty(category)) {
+        newItem.Name=newItem.name.replace(" ","-");
+        //add the item
 
-            //add the item
-            products[category].push(newItem);
+        //if it`s in a existing category
+        if (products.hasOwnProperty(`${category}s`)) {
+            newItem.id=`${category}${products[`${category}s`].length+1}`;
+            products[`${category}s`].push(newItem);
             $('#content-area-js').empty();
-            addProducts(category);
+            addProducts(`${category}s`);
         }
+        //if it`s a new category
         else {
-            products[newItem.Category] = [newItem];
+            newItem.id=`${category}1`;
+            products[`${newItem.Category}s`] = [newItem];
             $('#content-area-js').empty();
             $('#products-js').empty();
             fillDropDownMenu();
-            addProducts(category);
+            addProducts(`${newItem.Category}s`);
         }
 
 
